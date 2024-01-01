@@ -3,7 +3,7 @@
 </p>
 
 # YT Redirect
-
+### STILL IN DEVELOPMENT!!!
 ## Redirect YouTube videos automatically to alternative frontends.
 
 This redirects you after clicking on a youtube video to a service of your choice. This lets you keep your youtube recommendations (and continue being tracked!!!).\n
@@ -26,7 +26,6 @@ Also to come!!
 
 ## Want to change the alternative player?
 Click on the icon in the toolbar and then change the URL, you should ignore the 'www.' part of it.  
-
 
 ## Whats next? 
 next ideas of what to add, option tickbox to have it go back to youtube home screen.
