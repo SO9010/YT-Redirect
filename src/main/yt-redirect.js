@@ -1,24 +1,35 @@
+
 let FrontEnd;
+let run;
+let ytHomeValue;
 
-browser.storage.onChanged.addListener((changes, area) => {
-  if (area === 'local' && 'value' in changes){
-    FrontEnd = changes.value.newValue;
-  }
-})
+async function getValue(key) {
+  let storedValues = await browser.storage.local.get(key);
+  return storedValues[key];
+}
 
-function redirect(tabs) {
+async function loadVals(){
+  FrontEnd = await getValue("value");
+  run = await getValue("enable");
+  ytHomeValue = await getValue("ytHome");
+}
+
+function redirect() {
     let url = window.location.href;
     let newUrl = "https://";
     console.log(url);
+
     if (url.includes('youtube.com/watch?v=')) {
-        // Redirect to the specified webpage
-        newUrl = newUrl + FrontEnd + url.slice(23, url.length);
+    // Redirect to the specified webpage
+    newUrl = newUrl + FrontEnd + url.slice(23, url.length);
     console.log(newUrl);
     window.location.href = newUrl;
   }
 }
-
 // Listen to background which asks this to run again.
-browser.runtime.onMessage.addListener(redirect);
-
-redirect();
+loadVals().then(() => {
+  if(run){
+    browser.runtime.onMessage.addListener(redirect);
+    redirect();
+  }
+});

@@ -3,20 +3,35 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <style>
-            body {
-                padding: 1em;
-            }
-            input {
-                margin-left: 1em;
-            }
-        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <label>
-            Redirect videos to:
-            <input type="text">
+        <img src="../icons/redr-96.png" alt="YT Redirect icon" class="center"> 
+        <h1>YT Redirect</h1>
+
+        <label class="slider" >
+            <span id="onOff">Redirecting</span>
+            <input type="checkbox" id="toggle">
+            <span class="slider round"></span>
         </label>
+
+        <label class="slider">
+            <span id="ytAsHome">YouTube As Home</span>
+            <input type="checkbox" id="toggle_yt_as_home">
+            <span class="slider round"></span>
+        </label>
+
+
+        <p>Hello, change the text bellow with any <br>other YouTube alternative frontends! </p>
+
+        <label>
+            Redirect YouTube videos to: <br>
+            <input type="text" id="text_input">
+        </label>
+        
         <script src="popup.js"></script>
     </body>
 </html>

@@ -1,0 +1,83 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    color:#ffffff;
+    margin: 0;
+}
+
+p {
+    color: #797979;
+    text-align: center;
+    font-size: small;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #353535;
+    padding: 1em;
+    color:#c5c5c5;
+}
+
+label {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+}
+
+input[type=text] {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    width: 100%;
+    color:#c5c5c5;
+    border: 1px solid #6d6d6d;
+    border-radius: 4px;
+    background-color: #353535;
+}
+
+.slider {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  /* Styles for the hidden checkbox input */
+  .slider input {
+    display: none;
+  }
+  
+  /* Styles for the visible toggle switch */
+  .slider .round {
+    width: 40px;
+    height: 20px;
+    background-color: #6d6d6d;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  /* Styles for the toggle switch handle (the circle inside the switch) */
+  .slider .round:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s;
+  }
+  
+  /* Style when the checkbox is checked (toggle switch is on) */
+  .slider input:checked + .round:before {
+    transform: translateX(20px);
+  }
