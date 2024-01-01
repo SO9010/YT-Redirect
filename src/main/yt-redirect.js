@@ -1,5 +1,10 @@
-let client = "piped.video"
-let currentTab;
+let FrontEnd;
+
+browser.storage.onChanged.addListener((changes, area) => {
+  if (area === 'local' && 'value' in changes){
+    FrontEnd = changes.value.newValue;
+  }
+})
 
 function redirect(tabs) {
     let url = window.location.href;
@@ -7,7 +12,7 @@ function redirect(tabs) {
     console.log(url);
     if (url.includes('youtube.com/watch?v=')) {
         // Redirect to the specified webpage
-        newUrl = newUrl + client + url.slice(23, url.length);
+        newUrl = newUrl + FrontEnd + url.slice(23, url.length);
     console.log(newUrl);
     window.location.href = newUrl;
   }
