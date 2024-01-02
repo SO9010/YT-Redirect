@@ -6,7 +6,7 @@
 ### STILL IN DEVELOPMENT!!!
 ## Redirect YouTube videos automatically to alternative frontends.
 Have you given up on using adblock on YouTube??? Do you wish to still have your recommendations? Well, this may help!\
-This extension redirects you after clicking on a YouTube video to a service of your choice. This lets you keep your YouTube recommendations (and continue being tracked!!!).
+This extension redirects you after clicking on a YouTube video to a service of your choice. This lets you keep your YouTube recommendations (and continue being tracked!!!). It will take everything a bit longer to load as it refreshes everything after leaving, but it's still faster than watching an advert (by far)!
 
 ## Installation
 
@@ -26,14 +26,11 @@ Also to come!!
 ## Want to change the alternative player?
 Click on the icon in the toolbar and then change the URL, you should ignore the 'www.' part of it.  
 
-## Whats next? 
-next ideas of what to add, option tickbox to have it go back to youtube home screen.
-have it so you can click the back button
-have a nicer UI
-Redirect on/off && retunr to Youtube, styling
-
 ## Want to contribute?
 Yes... Yes... YES!!! Please do contribute, this is my first time writing an extension, so any improvements will be welcomed.
+
+## What needs improvement?
+There are several things I think it could be better with. For one being speed. Number two I would like it to not register everything to history and only show the one that it gets redirected to.
 
 ## Like my work?
 Buy me a coffee?\

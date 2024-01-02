@@ -21,9 +21,12 @@ function redirect() {
 
     if (url.includes('youtube.com/watch?v=')) {
     // Redirect to the specified webpage
-    newUrl = newUrl + FrontEnd + url.slice(23, url.length);
-    console.log(newUrl);
+    let tmp = url;
+    newUrl = newUrl + FrontEnd + url.slice(23, tmp.length);
     window.location.href = newUrl;
+  }
+  else if (ytHomeValue && url.includes(FrontEnd) && !url.includes("watch?v=")){
+    window.location.href = "https://www.youtube.com";
   }
 }
 // Listen to background which asks this to run again.
@@ -33,3 +36,14 @@ loadVals().then(() => {
     redirect();
   }
 });
+
+browser.storage.onChanged.addListener((changes, area) => {
+  if (area === 'local' && 'value' in changes){
+    loadVals().then(() => {
+      if(run){
+        browser.runtime.onMessage.addListener(redirect);
+        redirect();
+      }
+    });
+  }
+})
