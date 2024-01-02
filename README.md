@@ -11,7 +11,7 @@ This extension redirects you after clicking on a YouTube video to a service of y
 ## Installation
 
 ### Mozilla Add-Ons site
-To come!! 
+[Get the add-on from addons.mozilla.org](https://addons.mozilla.org/en-GB/firefox/addon/yt-redirect-tab/)
 
 ### Manual
 1. Download the `.xpi` addon file from the [Releases page](https://github.com/so9010/YT-Redirect/releases/)
