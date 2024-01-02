@@ -14,7 +14,9 @@ This extension redirects you after clicking on a YouTube video to a service of y
 To come!! 
 
 ### Manual
-Also to come!!
+1. Download the `.xpi` addon file from the [Releases page](https://github.com/so9010/YT-Redirect/releases/)
+2. Go to `about:addons`
+3. Click the gear icon and select `Install Add-on From File`
 
 ### Cloned repo
 1. Clone the repository or download as zip
