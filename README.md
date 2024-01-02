@@ -3,7 +3,6 @@
 </p>
 
 # YT Redirect
-### STILL IN DEVELOPMENT!!!
 ## Redirect YouTube videos automatically to alternative frontends.
 Have you given up on using adblock on YouTube??? Do you wish to still have your recommendations? Well, this may help!\
 This extension redirects you after clicking on a YouTube video to a service of your choice. This lets you keep your YouTube recommendations (and continue being tracked!!!). It will take everything a bit longer to load as it refreshes everything after leaving, but it's still faster than watching an advert (by far)!
