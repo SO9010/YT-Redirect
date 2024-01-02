@@ -5,8 +5,8 @@
 # YT Redirect
 ### STILL IN DEVELOPMENT!!!
 ## Redirect YouTube videos automatically to alternative frontends.
-Have you given up on using adblock on YouTube??? Do you wish to still have your recommendations? Well, this may help! \n
-This extension redirects you after clicking on a YouTube video to a service of your choice. This lets you keep your YouTube recommendations (and continue being tracked!!!).\n
+Have you given up on using adblock on YouTube??? Do you wish to still have your recommendations? Well, this may help!\
+This extension redirects you after clicking on a YouTube video to a service of your choice. This lets you keep your YouTube recommendations (and continue being tracked!!!).
 
 ## Installation
 
@@ -36,8 +36,13 @@ Redirect on/off && retunr to Youtube, styling
 Yes... Yes... YES!!! Please do contribute, this is my first time writing an extension, so any improvements will be welcomed.
 
 ## Like my work?
-Buy me a coffee?
+Buy me a coffee?\
 <a href="https://www.buymeacoffee.com/so9010" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 ## Credit
 I want to give some cridit to [d3vr/yt-siphon](https://github.com/d3vr/yt-siphon) for inspiring me.
+
+## License
+[![GNU GPLv3 Image](https://www.gnu.org/graphics/gplv3-127x51.png)](https://www.gnu.org/licenses/gpl-3.0.en.html)  
+
+NewPipe is Free Software: You can use, study, share, and improve it at will. Specifically you can redistribute and/or modify it under the terms of the [GNU General Public License](https://www.gnu.org/licenses/gpl.html) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
