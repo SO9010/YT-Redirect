@@ -27,7 +27,7 @@ async function toggleTextChange(enableValue, original, changed, whichId) {
 async function init() {
     let { value } = await browser.storage.local.get("value");
     if (!value) {
-        value = "yewtu.be";
+        value = "CHANGE ME";
     }
     input.value = value;
 
