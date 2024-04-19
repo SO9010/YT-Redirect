@@ -1,4 +1,3 @@
-
 let FrontEnd;
 let run;
 let ytHomeValue;
@@ -14,26 +13,33 @@ async function loadVals(){
   ytHomeValue = await getValue("ytHome");
 }
 
-function redirect() {
-    let url = window.location.href;
-    let newUrl = "https://";
-    console.log(url);
+let isRedirected = false; // Flag to track if redirection has already occurred
 
-    if (url.includes('youtube.com/watch?v=')) {
+function redirect() {
+  if (isRedirected) {
+    return; // If redirection has already occurred, exit the function
+  }
+
+  let url = window.location.href;
+  let newUrl = "https://";
+
+  if (FrontEnd != "CHANGE ME" && url.includes('youtube.com/watch?v=')) {
     // Redirect to the specified webpage
     let tmp = url;
     newUrl = newUrl + FrontEnd + url.slice(23, tmp.length);
     window.location.href = newUrl;
+    isRedirected = true; // Set flag to true to indicate redirection has occurred
   }
-  else if (ytHomeValue && url.includes(FrontEnd) && !url.includes("watch?v=")){
+  else if (FrontEnd != "CHANGE ME" && ytHomeValue && url.includes(FrontEnd) && !url.includes("watch?v=")){
     window.location.href = "https://www.youtube.com";
+    isRedirected = true; // Set flag to true to indicate redirection has occurred
   }
 }
+
 // Listen to background which asks this to run again.
 loadVals().then(() => {
   if(run){
     browser.runtime.onMessage.addListener(redirect);
-    redirect();
   }
 });
 
@@ -41,8 +47,8 @@ browser.storage.onChanged.addListener((changes, area) => {
   if (area === 'local' && 'value' in changes){
     loadVals().then(() => {
       if(run){
-        browser.runtime.onMessage.addListener(redirect);
-        redirect();
+        browser.runtime.onMessage.removeListener(redirect); // Remove the listener
+        browser.runtime.onMessage.addListener(redirect); // Add the listener again
       }
     });
   }
